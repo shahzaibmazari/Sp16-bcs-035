@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz 2</title>
+    <script>
+
+    function Student(Name,Age,Semester){
+    this.age=Age;
+    this.name=Name;
+    this.Semester=Semester;
+}
+
+//Adding a property to Student Prototype
+Student.prototype.program='BCS'
+
+//Creating objects using constructor method
+obj1=new Student('Faizan',21,8);
+obj2=new Student('Adnan',23,8);
+obj3=new Student('Zeeshan',23,8);
+
+
+
+console.log(obj2.name)
+
+//Adding a method to Student Prototype using defineProperty method
+Object.defineProperty(Student.prototype, "printFunction", {
+  get() {
+    console.log("Name is"+ this.name +", age is "+this.age+" and Semester is"+ this.Semester);
+  }
+});
+
+
+//calling the method defined using defineProperty methode
+obj3.printFunction
+
+
+//Adding objects to array
+var arr=[obj1,obj2,obj3]
+
+//function to check if the input key provided by the user exists in the Object or Not
+function printInfo(input){
+    for(var i=0;i<arr.length;i++){
+        //To check whether the property exits
+        //if exists, either it have any value or no
+    if(input in arr[i]){
+        console.log(arr[i][input])
+    }
+
+}
+}
+var input=prompt('Enter a property name');
+printInfo(input)
+</script>
+</head>
+    <body>
+    </body>
+    </html>
