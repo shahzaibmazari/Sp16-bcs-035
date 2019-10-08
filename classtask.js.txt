@@ -1,0 +1,47 @@
+          class Student{
+                constructor(name,F_name,age)
+                {
+                    this.name=name;
+                    this.F_name=F_name;
+                    this.age=age;
+                }
+            }
+            class mgmtStudent extends Student
+            {
+                constructor(name,F_name,age,industryName)
+                {
+                    super(name,F_name,age)
+                    this.industryName=industryName;
+                }
+                get industry_name_get()
+                {
+                    return this.industryName
+                }
+                set industry_name_set(industryName)
+                {
+                    this.industryName=industryName
+                }
+            }
+            class csStudent extends Student
+            {
+                constructor(name,F_name,age,fypTitle)
+                {
+                    super(name,F_name,age)
+                    this.fypTitle=fypTitle;
+                }
+                set Set_fypTitle(fypTitle)
+                {
+                    this.fypTitle=fypTitle;
+                }
+                get get_fypTitle()
+                {
+                    return [this.name,this.F_name,this.age,this.fypTitle];
+                }
+            }
+            std1=new csStudent("mazari","rasheed",22,"smartHutt")
+            std2=new mgmtStudent("taimor","Rasheed",22,"businees internship")
+            // console.log(fawad)
+            std1.Set_fypTitle="new project"
+            std2.industry_name_set="HR "
+            console.log(std1.get_fypTitle)
+            console.log(std2.industry_name_get)
