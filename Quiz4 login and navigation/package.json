@@ -1,0 +1,21 @@
+{
+  "name": "tactless-orange",
+  "version": "0.0.0",
+  "description": "No description",
+  "author": null,
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "devDependencies": {
+    "babel-preset-expo": "^7.0.0"
+  },
+  "dependencies": {
+    "expo": "^36.0.0",
+    "react": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-navigation": "^4.0.7",
+    "react-native-paper": "3.1.1",
+    "react-native-screens": "^1.0.0-alpha",
+    "react-navigation-stack": "1.10.3",
+    "react-native-gesture-handler": "^1.0.0"
+  }
+}
